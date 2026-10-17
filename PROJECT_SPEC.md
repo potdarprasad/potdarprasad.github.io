@@ -38,16 +38,17 @@ Only use facts below. Do not invent employers, dates, metrics, skills, testimoni
 - Languages: TypeScript, JavaScript, Python.
 - Backend: Node.js, NestJS, Microservices, RabbitMQ, BullMQ.
 - Frontend and mobile: React, Next.js, Tailwind CSS, Angular, Flutter, Provider, BLoC.
-- Databases: PostgreSQL, MongoDB, MySQL, Redis, Drizzle ORM.
+- Databases: PostgreSQL, MongoDB, MySQL, Redis, Neon, Drizzle ORM.
 - APIs and security: REST, GraphQL, WebSockets, JWT, OAuth, Better Auth, zod.
-- Cloud and delivery: AWS (Lambda, EC2, S3, SQS), Vercel (hosting), Docker, Kubernetes, Pulumi, Git, GitHub Actions, deployment pipelines, CI/CD.
+- Cloud and delivery: AWS (Lambda, EC2, S3, SQS), Vercel (hosting), Cloudflare R2, Docker, Kubernetes, Pulumi, Git, GitHub Actions, deployment pipelines, CI/CD.
 - Engineering practice: system design, architecture reviews, testing with Jest, Supertest, Cypress, Playwright, Flutter test.
 
 **Project**
-- Vasundhara Nature Studio, https://vasundharanaturestudio.com: a full online shop for an aquarium and aquascaping studio, built as an AI project. Source: Prasad's repo `vasundhara-nature-studio` (README and `docs/`). Prasad approved showing its features, AI and technologies.
-  - Features: Plan my tank (wizard, AI-written plan, changes by chat, studio quote); "Vasu" AI assistant (care answers from the shop's species data, recommends only in-stock products); shop with live stock that cannot be oversold, delivery across India priced by zone and weight, UPI payments; My tanks (tank records, "Will it suit my tank?" check, email care reminders); staff admin (orders, stock, services, AI help for new species, cookie-free analytics).
-  - AI: Groq (gpt-oss-120b), then Google Gemini, then OpenRouter as fallbacks; answers grounded in the shop's species and stock data; AI endpoints rate limited.
-  - Built with: Next.js 16, React 19, TypeScript, PostgreSQL, Drizzle ORM, Better Auth (email and Google sign-in), Tailwind CSS 4, zod, sharp. Hosted on Vercel (confirmed from the live site's response headers; the repo README's "self-hosted" note is out of date).
+- Vasundhara Nature Studio, https://vasundharanaturestudio.com: production e-commerce and operations system for a real aquarium and aquascaping studio, built with AI. The card text is Prasad's own write-up (supplied 2026-10-17); use it as written.
+  - Features: stock that cannot be oversold (reserved in a DB transaction, concurrent race tests, counter sales flow back, unpaid orders expire); Plan my tank (wizard, AI-written plan refined by chat, becomes a studio quote or ready-made cart); Vasu AI assistant grounded in the shop's species data, and "Help me choose" picks only in-stock products that fit the tank, fish and budget; one pricing engine for options, pack prices, offers, coupons and bundles, used by cart, delivery estimate and order; checkout for India (zone and weight estimates, flat per-box fee for live fish, staff-confirmed charge, UPI link or QR, live-arrival guarantee with WhatsApp claims, credit or refund); retention (saved tanks with "Will it suit my tank?", care-reminder emails, back-in-stock alerts, maintenance plans); fast and cheap to run (CDN pages refreshed on staff changes, Vercel free plan, Neon Postgres, scheduled jobs, cookie-free analytics).
+  - AI: provider-agnostic LLM layer, Groq first, then Gemini, then OpenRouter. Recommendations come from the shop database (products and species), so it only suggests what is in stock. AI endpoints are server-side only, rate-limited and token-capped.
+  - Stack: Next.js 16, React 19, TypeScript, PostgreSQL (Neon), Drizzle ORM, Better Auth (email + Google), Tailwind CSS 4, zod, Vercel, Cloudflare R2.
+  - Scale: 70 database tables; 48 automated test suites run against a separate test database; first commit to production in about 1 week.
   - Card image: `vasundhara.webp`, the site's own home hero photo.
   - Do not name the business's city on the portfolio (it would reveal Prasad's city).
 
@@ -104,6 +105,5 @@ Optional free custom address: `<name>.is-a.dev` via a pull request to `is-a-dev/
 - [x] Vasundhara AI details added from the repo.
 - [x] Stack updated with what Vasundhara uses: Groq (replacing Grok), Gemini, OpenRouter, Next.js, Tailwind CSS, Drizzle ORM, Better Auth, zod.
 - [x] Vasundhara hosting: Vercel.
-- [ ] Commit `vasundhara.webp` along with the other files when deploying.
 - [ ] Add AI repos to the Selected work section once they exist.
 - [x] Public contact email added: prasadmpotdar22@gmail.com.
