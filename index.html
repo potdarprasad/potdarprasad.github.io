@@ -318,24 +318,21 @@ nav.top a.hire.on{color:var(--on-accent);background:var(--accent)}
             <div><b>~1 wk</b><span>First commit to production</span></div>
           </div>
         </div>
-        <p class="intro">A full online shop and operations system for a real aquarium and aquascaping studio, live in production. Customers buy fish and equipment with real-time stock, book services, and plan tanks with AI. Staff use the same app for orders, payments, counter sales and stock, so the website always matches the shop floor.</p>
+        <p class="intro">A production e-commerce and operations platform for a real aquarium studio. Customers shop real-time stock, book services and plan tanks with AI; staff run orders, payments and inventory from the same app.</p>
         <ul class="feats">
-          <li><b>Stock that can’t be oversold</b>Stock is reserved inside a database transaction at checkout and checked with concurrent race tests. Counter sales flow back into it, and unpaid orders expire on their own.</li>
-          <li><b>Plan my tank</b>A short wizard produces an AI-written tank plan that the customer refines by chat. It then becomes a studio quote or a ready-made cart.</li>
-          <li><b>Vasu, an AI assistant grounded in the shop’s data</b>Answers fish compatibility and care questions from the shop’s own species data. “Help me choose” picks only from in-stock products that fit the customer’s tank, current fish and budget.</li>
-          <li><b>One pricing engine for the whole shop</b>Product options, pack prices, section offers, coupons and bundle deals all go through one function. The cart, the delivery estimate and the final order use it, so the totals always match.</li>
-          <li><b>Checkout built for India</b>Delivery estimates by zone and weight, with a flat fee per box for live fish. Staff confirm the exact charge, and the customer pays by UPI link or QR code. Live fish come with an arrival guarantee: dead-on-arrival claims are handled through WhatsApp, with credit or refund.</li>
-          <li><b>Keeps customers coming back</b>Saved tanks with a “Will it suit my tank?” check on every product, care-reminder emails, back-in-stock alerts, and repeat maintenance plans.</li>
-          <li><b>Fast and cheap to run</b>Shop pages are served from the CDN and refreshed when staff change something. The whole thing runs on Vercel’s free plan and Neon Postgres, with scheduled jobs and cookie-free analytics.</li>
+          <li><b>Inventory that can’t be oversold</b>Stock is reserved inside a database transaction at checkout and verified with concurrent race tests. Counter sales sync back, and unpaid orders expire automatically.</li>
+          <li><b>AI tank planner</b>A short wizard generates a tank plan that customers refine by chat, then turn into a studio quote or a ready-made cart.</li>
+          <li><b>Grounded AI assistant</b>Answers care and compatibility questions from the shop’s own species data, and recommends only in-stock products that fit the customer’s tank and budget.</li>
+          <li><b>One pricing engine</b>Options, offers, coupons and bundles go through a single function shared by the cart, delivery estimate and final order, so totals always match.</li>
         </ul>
         <div class="fmeta">
           <div>
-            <span class="label">AI</span>
-            <p>A provider-agnostic LLM layer: Groq first, falling back automatically to Gemini and then OpenRouter. AI recommendations come from the shop’s own database (products and species data), so it only suggests what’s actually in stock. Every AI endpoint is server-side only, rate-limited and token-capped.</p>
+            <span class="label">AI architecture</span>
+            <p>Provider-agnostic LLM layer: Groq, with automatic fallback to Gemini and OpenRouter. Server-side only, rate-limited and token-capped.</p>
           </div>
           <div>
             <span class="label">Stack</span>
-            <div class="chips"><span>Next.js 16</span><span>React 19</span><span>TypeScript</span><span>PostgreSQL (Neon)</span><span>Drizzle ORM</span><span>Better Auth (email + Google)</span><span>Tailwind CSS 4</span><span>zod</span><span>Vercel</span><span>Cloudflare R2</span></div>
+            <div class="chips"><span>Next.js 16</span><span>React 19</span><span>TypeScript</span><span>PostgreSQL</span><span>Drizzle ORM</span><span>Better Auth</span><span>Tailwind CSS 4</span><span>Vercel</span><span>Cloudflare R2</span></div>
           </div>
         </div>
         <div class="ffoot">
