@@ -20,7 +20,7 @@ No frameworks, no bundler, no npm dependencies. Fonts load from Google Fonts (Br
 Only use facts below. Do not invent employers, dates, metrics, skills, testimonials or project details. If something is missing, leave it out and add it to "Open items".
 
 **Identity**
-- Prasad Potdar, Senior Full Stack Developer at VoterCircle India Private Limited (Bangalore, remote), since Mar 2022.
+- Prasad Potdar, Senior Full Stack Developer at Political Data Intelligence (remote), since Mar 2022. Employed through VoterCircle India Private Limited (Bangalore), its Indian subsidiary. Lead with "Political Data Intelligence" everywhere; mention VoterCircle only as the subsidiary.
 - 9+ years of professional experience, career start Aug 2017.
 - Remote in every role. Based in Maharashtra, India.
 - Open to all types of work, and open for consultation.
@@ -29,7 +29,7 @@ Only use facts below. Do not invent employers, dates, metrics, skills, testimoni
 - Do NOT publish: date of birth, any other email address, exact city, family details.
 
 **Experience**
-- VoterCircle India (Mar 2022 to present): NestJS microservices on a shared-libraries architecture; background and async processing on RabbitMQ and BullMQ; serverless infrastructure as code with Pulumi; Flutter apps with a custom architecture using Provider and BLoC; formal architecture reviews as part of technical leadership; Kubernetes and CI/CD pipelines.
+- Political Data Intelligence, via VoterCircle India (Mar 2022 to present): NestJS microservices on a shared-libraries architecture; background and async processing on RabbitMQ and BullMQ; serverless infrastructure as code with Pulumi; Flutter apps with a custom architecture using Provider and BLoC; formal architecture reviews as part of technical leadership; Kubernetes and CI/CD pipelines.
 - ISITCA (2019 to 2021, early-stage startup, remote): led a team of 10 engineers.
 - Also: Step Set Go, Freelance (no dates given).
 
@@ -55,7 +55,7 @@ Only use facts below. Do not invent employers, dates, metrics, skills, testimoni
 
 ## Page structure
 1. Sticky pill nav (`~/prasad-potdar` with blinking cursor, links, "Hire me").
-2. Hero: `$ whoami`, name, "Senior Full Stack Developer at VoterCircle India", rotating "I build ..." line, lead copy, two buttons, legend for the code background. Right side: `profile.json` at-a-glance panel.
+2. Hero: `$ whoami`, name, "Senior Full Stack Developer at Political Data Intelligence", rotating "I build ..." line, lead copy, two buttons, legend for the code background. Right side: `profile.json` at-a-glance panel.
 3. Experience timeline.
 4. Stack bento grid, AI as the featured tile.
 5. Selected work: Vasundhara Nature Studio card.
@@ -97,7 +97,7 @@ Optional free custom address: `<name>.is-a.dev` via a pull request to `is-a-dev/
 
 ## Open items
 - [x] Vasundhara card image: the site's home hero photo (`vasundhara.webp`).
-- [ ] One concrete result from the VoterCircle work (scale, speed, cost saved) for the experience card.
+- [ ] One concrete result from the Political Data Intelligence work (scale, speed, cost saved) for the experience card.
 - [x] Name the testing tools used: Jest, Supertest, Flutter test.
 - [x] E2E tools: both Cypress and Playwright.
 - [x] "Vercel" means both: hosting (Cloud and delivery) and the Vercel AI SDK (AI tile).
