@@ -10,6 +10,7 @@ Make a client or recruiter confident in Prasad within seconds: current role, yea
 - `index.html`: the whole site (HTML, CSS in one `<style>`, JS in one `<script>` at the end).
 - `vasundhara.webp`: photo for the Vasundhara project card.
 - `og.png`: 1200×630 link-preview image (Open Graph) for LinkedIn, WhatsApp, etc.
+- `robots.txt`, `sitemap.xml`: crawler hints for search engines.
 - `README.md`: short deploy notes.
 - `PROJECT_SPEC.md`: this file.
 - `CLAUDE.md`: one line that imports this file for Claude Code.
@@ -56,11 +57,11 @@ Only use facts below. Do not invent employers, dates, metrics, skills, testimoni
 
 ## Page structure
 1. Sticky pill nav (`~/prasad-potdar` with blinking cursor, links, "Hire me").
-2. Hero: `$ whoami`, name, "Senior Full Stack Developer at Political Data Intelligence", rotating "I build ..." line, lead copy, two buttons, legend for the code background. Right side: `profile.json` at-a-glance panel.
-3. Experience timeline.
-4. Stack bento grid, AI as the featured tile.
+2. Hero: `$ whoami`, name, "Senior Full Stack Developer at Political Data Intelligence", rotating "I build ..." line (starts broad: "full-stack products, end to end"), lead copy, two buttons for the two visitor paths ("Discuss a project" for clients, "Hiring? See my experience" for recruiters), legend for the code background. Right side: `profile.json` at-a-glance panel.
+3. Experience timeline. Current role bullets are grouped under three themes: Architecture and backend, Cloud and delivery, Leadership and mobile.
+4. Stack bento grid, "AI engineering" as the featured tile: practice chips first, provider names in a smaller secondary row, Agentic AI under Learning.
 5. Selected work: Vasundhara Nature Studio card.
-6. Contact: closing card with LinkedIn button, then footer.
+6. Contact: closing card with two path cards (Hiring, Consulting), "Email about a project" / "Email about a role" (mailto with subject) and LinkedIn, then footer. "Open to all types of work" appears once here and once in profile.json, not in the hero.
 
 ## Design system
 Dark first, light follows `prefers-color-scheme`. All colours are CSS variables on `:root`.
@@ -91,7 +92,7 @@ Only these animate: hero fade-in, rotating "I build" line, top scroll-progress l
 
 ## Deploy (GitHub Pages)
 1. Create a public repo named `<username>.github.io`.
-2. Commit `index.html`, `vasundhara.webp`, `og.png`, `README.md`, `PROJECT_SPEC.md`, `CLAUDE.md` to `main`.
+2. Commit `index.html`, `vasundhara.webp`, `og.png`, `robots.txt`, `sitemap.xml`, `README.md`, `PROJECT_SPEC.md`, `CLAUDE.md` to `main`.
 3. Settings, Pages, Deploy from a branch, `main` and `/ (root)`.
 4. Live at `https://<username>.github.io/`.
 Optional free custom address: `<name>.is-a.dev` via a pull request to `is-a-dev/register`; read that repo's README first.
@@ -106,4 +107,10 @@ Optional free custom address: `<name>.is-a.dev` via a pull request to `is-a-dev/
 - [x] Stack updated with what Vasundhara uses: Groq (replacing Grok), Gemini, OpenRouter, Next.js, Tailwind CSS, Drizzle ORM, Better Auth, zod.
 - [x] Vasundhara hosting: Vercel.
 - [ ] Add AI repos to the Selected work section once they exist.
+- [ ] Résumé PDF for a download button (none in the repo yet).
+- [ ] Real Vasundhara screenshots (storefront, tank planner, AI assistant, staff screens) and optionally an architecture diagram.
+- [ ] ISITCA scope: what the team of 10 built and what Prasad owned (planning, reviews, mentoring, delivery).
+- [ ] Step Set Go: dates, type of engagement, one contribution.
+- [ ] Vasundhara metrics: confirm what "48 test suites" counts (files or suites), and what "~1 week to production" covers (first release vs whole system).
+- [ ] Consulting: which offerings Prasad wants to list, and confirm the employer allows outside work.
 - [x] Public contact email added: prasadmpotdar22@gmail.com.

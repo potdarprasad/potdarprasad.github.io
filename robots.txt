@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://potdarprasad.github.io/sitemap.xml

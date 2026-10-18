@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="description" content="Prasad Potdar - Senior Full Stack Developer with 9+ years of experience. NestJS, React, Next.js, Flutter, PostgreSQL, AWS and AI. Open to all types of work and to consultation.">
+<meta name="description" content="Prasad Potdar, Senior Full Stack Developer with 9+ years of experience designing, building and shipping backend, web, mobile, cloud and AI systems, including technical leadership. Open to roles and consultation.">
 <meta name="author" content="Prasad Potdar">
 <meta name="theme-color" content="#090e1a" media="(prefers-color-scheme: dark)">
 <meta name="theme-color" content="#f5f7fc" media="(prefers-color-scheme: light)">
@@ -11,7 +11,7 @@
 <meta property="og:type" content="profile">
 <meta property="og:url" content="https://potdarprasad.github.io/">
 <meta property="og:title" content="Prasad Potdar · Senior Full Stack Developer">
-<meta property="og:description" content="9+ years building web, mobile, cloud and AI systems. NestJS, React, Next.js, Flutter, PostgreSQL, AWS. Open to all types of work and to consultation.">
+<meta property="og:description" content="9+ years designing, building and shipping backend, web, mobile, cloud and AI systems, with technical leadership. Open to roles and consultation.">
 <meta property="og:image" content="https://potdarprasad.github.io/og.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -128,6 +128,10 @@ section{padding-top:128px;scroll-margin-top:72px}
 .pts li::before{content:"";position:absolute;left:0;top:.72em;width:10px;height:2px;background:var(--accent);border-radius:2px}
 .also{display:flex;flex-wrap:wrap;gap:10px;align-items:center;color:var(--muted)}
 .also b{padding:8px 16px;border:1px dashed var(--line);border-radius:999px;color:var(--fg);font:500 13px/1 var(--mono)}
+.groups{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px 36px;margin-top:28px}
+.groups .label{display:block;margin-bottom:12px;color:var(--accent2)}
+.groups .pts{margin:0;grid-template-columns:minmax(0,1fr);gap:12px}
+@media (max-width:860px){.groups{grid-template-columns:minmax(0,1fr)}}
 @media (max-width:640px){.job{padding:24px}.tl{padding-left:30px}.job::after{left:-30px}}
 
 /* bento */
@@ -140,6 +144,8 @@ section{padding-top:128px;scroll-margin-top:72px}
 .panel.ai{padding:36px;border-color:var(--accent);background:linear-gradient(135deg,color-mix(in srgb,var(--accent) 12%,var(--surface)),var(--surface) 60%)}
 .panel.ai h3{font-size:clamp(2rem,5vw,3.2rem);font-weight:800;letter-spacing:-.04em;color:var(--accent)}
 .panel.ai .chips span{font-size:16px;padding:13px 19px;border-radius:14px}
+.prov{display:flex;flex-wrap:wrap;align-items:center;gap:12px}
+.panel.ai .prov .chips span{font-size:14px;padding:10px 15px;border-radius:12px}
 .learn{display:flex;flex-wrap:wrap;align-items:center;gap:12px}
 .learn b{padding:9px 16px;border:1px dashed var(--accent2);border-radius:999px;color:var(--fg);font:500 14px/1 var(--mono)}
 @media (max-width:860px){.bento{grid-template-columns:repeat(2,minmax(0,1fr))}.panel,.panel.w3,.panel.w4{grid-column:span 1}.panel.w6{grid-column:span 2}}
@@ -161,6 +167,7 @@ section{padding-top:128px;scroll-margin-top:72px}
 .stats div{background:var(--surface2);border:1px solid var(--line);border-radius:16px;padding:16px 16px 14px;min-width:0}
 .stats b{display:block;white-space:nowrap;font:800 clamp(1.6rem,3vw,2.2rem)/1 var(--display);letter-spacing:-.03em;color:var(--fg)}
 .stats span{display:block;margin-top:8px;font:500 11px/1.4 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.statnote{margin-top:10px;font:400 12px/1.5 var(--mono);color:var(--muted)}
 .feats{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(320px,100%),1fr));gap:22px 40px}
 .feats li{position:relative;padding-left:22px;font-size:.98rem;line-height:1.65}
 .feats li::before{content:"";position:absolute;left:0;top:.78em;width:10px;height:2px;background:var(--accent2);border-radius:2px}
@@ -177,6 +184,11 @@ section{padding-top:128px;scroll-margin-top:72px}
 .closing{margin-top:128px;border-radius:32px;padding:72px 40px;background:radial-gradient(600px 300px at 50% 0%,var(--glow),transparent 70%),var(--surface);border:1px solid var(--line);text-align:center;display:flex;flex-direction:column;align-items:center;gap:24px}
 .closing h2{font-size:clamp(2.5rem,7.5vw,5.6rem);font-weight:800;letter-spacing:-.05em;line-height:.92;max-width:13ch}
 .closing p{max-width:46ch;font-size:1.15rem}
+.paths{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;width:100%;max-width:780px;text-align:left}
+.paths div{background:var(--surface2);border:1px solid var(--line);border-radius:18px;padding:22px 24px;min-width:0}
+.paths .label{display:block;margin-bottom:8px;color:var(--accent2)}
+.closing .paths p{font-size:1rem;max-width:none}
+@media (max-width:700px){.paths{grid-template-columns:minmax(0,1fr)}}
 @media (max-width:640px){.closing{padding:52px 22px;margin-top:88px}}
 
 footer{margin-top:44px;padding-top:24px;border-top:1px solid var(--line);display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 32px;font:400 13px/1.5 var(--mono);color:var(--muted)}
@@ -235,11 +247,11 @@ nav.top a.hire.on{color:var(--on-accent);background:var(--accent)}
       <p class="prompt"><b>$</b>whoami</p>
       <h1>Prasad <span>Potdar</span></h1>
       <p class="role">Senior Full Stack Developer <em>at Political Data Intelligence</em></p>
-      <p class="focus"><span class="label">I build</span><span class="rot" id="rot">NestJS microservices</span></p>
-      <p class="lead">I take web, mobile and cloud systems from first spec to production. I learn fast, pick up whatever the project needs, and I'm open to all types of work, including consultation.</p>
+      <p class="focus"><span class="label">I build</span><span class="rot" id="rot">full-stack products, end to end</span></p>
+      <p class="lead">I design, build and ship production software: backend systems, web and mobile apps, cloud infrastructure and AI features. 9+ years across architecture, hands-on delivery and technical leadership, and I pick up whatever a project needs.</p>
       <div class="cta">
-        <a class="btn primary" href="#contact">Let's work together →</a>
-        <a class="btn" href="#work">See my work</a>
+        <a class="btn primary" href="#contact">Discuss a project →</a>
+        <a class="btn" href="#experience">Hiring? See my experience</a>
       </div>
       <p class="legend"><i class="o"></i>classic<i class="n"></i>modern<span>// decorative background</span></p>
     </div>
@@ -264,14 +276,20 @@ nav.top a.hire.on{color:var(--on-accent);background:var(--accent)}
         <div class="label">Mar 2022 – Present · Bangalore · Remote<span class="now">CURRENT</span></div>
         <h3>Senior Full Stack Developer</h3>
         <div class="co">Political Data Intelligence <span style="color:var(--muted);font-weight:400">· via VoterCircle India Private Limited, its Indian subsidiary</span></div>
-        <ul class="pts">
-          <li>Built NestJS microservices on a shared-libraries architecture.</li>
-          <li>Ran background and asynchronous processing on RabbitMQ and BullMQ.</li>
-          <li>Managed serverless infrastructure as code with Pulumi.</li>
-          <li>Built Flutter apps with a custom architecture, using Provider and BLoC for state.</li>
-          <li>Led formal architecture reviews as part of technical leadership.</li>
-          <li>Worked with Kubernetes and wrote CI/CD pipelines.</li>
-        </ul>
+        <div class="groups">
+          <div><span class="label">Architecture and backend</span><ul class="pts">
+            <li>Built NestJS microservices on a shared-libraries architecture.</li>
+            <li>Ran background and asynchronous processing on RabbitMQ and BullMQ.</li>
+          </ul></div>
+          <div><span class="label">Cloud and delivery</span><ul class="pts">
+            <li>Managed serverless infrastructure as code with Pulumi.</li>
+            <li>Worked with Kubernetes and wrote CI/CD pipelines.</li>
+          </ul></div>
+          <div><span class="label">Leadership and mobile</span><ul class="pts">
+            <li>Led formal architecture reviews as part of technical leadership.</li>
+            <li>Built Flutter apps with a custom architecture, using Provider and BLoC for state.</li>
+          </ul></div>
+        </div>
       </article>
       <article class="job past">
         <div class="label">2019 – 2021 · Remote</div>
@@ -287,7 +305,7 @@ nav.top a.hire.on{color:var(--on-accent);background:var(--accent)}
     <div class="eyebrow label">Stack</div>
     <h2 class="sec-title" id="stack-h">Tools I reach for</h2>
     <div class="bento">
-      <div class="panel ai w6"><span class="label">Featured</span><h3>AI</h3><div class="chips"><span>Claude</span><span>OpenAI</span><span>Groq</span><span>Google Gemini</span><span>OpenRouter</span><span>RAG</span><span>Vercel AI SDK</span><span>Spec-driven development</span></div><div class="learn"><span class="label">Learning</span><b>Agentic AI</b></div></div>
+      <div class="panel ai w6"><span class="label">Featured</span><h3>AI engineering</h3><div class="chips"><span>RAG</span><span>Vercel AI SDK</span><span>Spec-driven development</span></div><div class="prov"><span class="label">Providers</span><div class="chips"><span>Claude</span><span>OpenAI</span><span>Groq</span><span>Google Gemini</span><span>OpenRouter</span></div></div><div class="learn"><span class="label">Learning</span><b>Agentic AI</b></div></div>
       <div class="panel w3"><h3>Backend</h3><div class="chips"><span>Node.js</span><span>NestJS</span><span>Microservices</span><span>RabbitMQ</span><span>BullMQ</span></div></div>
       <div class="panel w3"><h3>Frontend and mobile</h3><div class="chips"><span>React</span><span>Next.js</span><span>Tailwind CSS</span><span>Angular</span><span>Flutter</span><span>Provider</span><span>BLoC</span></div></div>
       <div class="panel"><h3>Languages</h3><div class="chips"><span>TypeScript</span><span>JavaScript</span><span>Python</span></div></div>
@@ -312,10 +330,13 @@ nav.top a.hire.on{color:var(--on-accent);background:var(--accent)}
             <h3 id="vns-h">Vasundhara Nature Studio</h3>
             <p class="sub">Live at vasundharanaturestudio.com</p>
           </div>
+          <div>
           <div class="stats">
             <div><b>70</b><span>Database tables</span></div>
             <div><b>48</b><span>Automated test suites</span></div>
             <div><b>~1 wk</b><span>First commit to production</span></div>
+          </div>
+          <p class="statnote">All 48 suites run against a separate test database.</p>
           </div>
         </div>
         <p class="intro">A production e-commerce and operations platform for a real aquarium studio. Customers shop real-time stock, book services and plan tanks with AI; staff run orders, payments and inventory from the same app.</p>
@@ -345,9 +366,14 @@ nav.top a.hire.on{color:var(--on-accent);background:var(--accent)}
   <section id="contact" class="closing" aria-labelledby="contact-h" style="padding-top:72px">
     <span class="label">Contact</span>
     <h2 id="contact-h">Have something to build?</h2>
-    <p>Open to all types of work, remote, and to consultation on architecture, AI features and delivery. I pick up new tools quickly and take projects from first spec to production.</p>
+    <p>Open to all types of work, remote. I pick up new tools quickly and take projects from first spec to production.</p>
+    <div class="paths">
+      <div><span class="label">Hiring</span><p>Senior full-stack and technical leadership roles. 9+ years, remote in every role.</p></div>
+      <div><span class="label">Consulting</span><p>Architecture reviews, NestJS backends and microservices, AI features, and getting a product from spec to production.</p></div>
+    </div>
     <div class="cta" style="justify-content:center">
-      <a class="btn primary" href="mailto:prasadmpotdar22@gmail.com">Email me</a>
+      <a class="btn primary" href="mailto:prasadmpotdar22@gmail.com?subject=Project%20enquiry">Email about a project</a>
+      <a class="btn" href="mailto:prasadmpotdar22@gmail.com?subject=Role%20opportunity">Email about a role</a>
       <a class="btn" href="https://www.linkedin.com/in/prasad-potdar-b43a5412a" target="_blank" rel="noopener">Message me on LinkedIn ↗</a>
     </div>
   </section>
@@ -432,7 +458,7 @@ nav.top a.hire.on{color:var(--on-accent);background:var(--accent)}
   prog();
 
   /* role rotator in the hero */
-  var rot=d.getElementById('rot'),words=['NestJS microservices','Flutter mobile apps','cloud infrastructure','AI features with RAG'],i=0;
+  var rot=d.getElementById('rot'),words=['full-stack products, end to end','NestJS microservices','Flutter mobile apps','cloud infrastructure','AI features with RAG'],i=0;
   setInterval(function(){rot.classList.add('out');setTimeout(function(){i=(i+1)%words.length;rot.textContent=words[i];rot.classList.remove('out');},350);},2800);
 
   /* scroll reveal, with a fallback so nothing stays hidden */
