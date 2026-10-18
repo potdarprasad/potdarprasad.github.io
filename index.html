@@ -170,6 +170,9 @@ section{padding-top:128px;scroll-margin-top:72px}
 .stats div{background:var(--surface2);border:1px solid var(--line);border-radius:16px;padding:16px 16px 14px;min-width:0}
 .stats b{display:block;white-space:nowrap;font:800 clamp(1.6rem,3vw,2.2rem)/1 var(--display);letter-spacing:-.03em;color:var(--fg)}
 .stats span{display:block;margin-top:8px;font:500 11px/1.4 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.feature+.feature{margin-top:20px}
+.stats.two{grid-template-columns:repeat(2,minmax(0,1fr))}
+@media (max-width:420px){.stats.two{grid-template-columns:minmax(0,1fr)}}
 .statnote{margin-top:10px;font:400 12px/1.5 var(--mono);color:var(--muted)}
 .feats{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(320px,100%),1fr));gap:22px 40px}
 .feats li{position:relative;padding-left:22px;font-size:.98rem;line-height:1.65}
@@ -271,7 +274,7 @@ nav.top a.hire.on{color:var(--on-accent);background:var(--accent)}
       <h1>Prasad <span>Potdar</span></h1>
       <p class="role">Senior Full Stack Developer <em>at Political Data Intelligence</em></p>
       <p class="focus"><span class="label">I build</span><span class="rot" id="rot">full-stack products, end to end</span></p>
-      <p class="lead">I design, build and ship production software: backend systems, web and mobile apps, cloud infrastructure and AI features. 9+ years across architecture, hands-on delivery and technical leadership, and I pick up whatever a project needs.</p>
+      <p class="lead">I build production software that solves real business problems. 9+ years across backend systems, web and mobile apps, cloud and AI, from requirements to production, including technical leadership.</p>
       <div class="cta">
         <a class="btn primary" href="#contact">Discuss a project →</a>
         <a class="btn" href="#experience">Hiring? See my experience</a>
@@ -304,11 +307,11 @@ nav.top a.hire.on{color:var(--on-accent);background:var(--accent)}
           <div><span class="label">Architecture and backend</span><ul class="pts">
             <li>Architected NestJS microservices on a shared-libraries architecture, cutting duplicated code and shortening ramp-up for new engineers.</li>
             <li>Built queue-based processing on RabbitMQ and BullMQ, keeping background jobs resilient to downstream failures.</li>
-            <li>Cut API response times by up to 40% under peak load by optimising GraphQL and REST APIs, data access and caching.</li>
+            <li>Optimised GraphQL and REST APIs, data access and caching, helping bring response times down by up to about 40% under peak load.</li>
           </ul></div>
           <div><span class="label">Cloud and delivery</span><ul class="pts">
             <li>Moved parts of the stack to serverless with Pulumi (infrastructure as code), trimming cloud spend.</li>
-            <li>Built Docker and Kubernetes deployments on Jenkins CI/CD, cutting deployment time roughly in half.</li>
+            <li>Built Docker and Kubernetes deployments on Jenkins CI/CD, helping roughly halve deployment time.</li>
           </ul></div>
           <div><span class="label">Leadership and mobile</span><ul class="pts">
             <li>Ran architecture and code reviews across the team, and brought AI-assisted workflows (GitHub Copilot, Claude, spec-driven development) into implementation and review.</li>
@@ -322,8 +325,8 @@ nav.top a.hire.on{color:var(--on-accent);background:var(--accent)}
         <h3>Full Stack Developer</h3>
         <div class="co">Step Set Go</div>
         <ul class="pts">
-          <li>Built high-availability payment services on Razorpay and Paytm, with automatic gateway failover during outages, sustaining 99.9% uptime.</li>
-          <li>Raised transaction success rates by about 25% by reworking payment workflows, retries and error handling.</li>
+          <li>Built high-availability payment services on Razorpay and Paytm, with automatic gateway failover during outages; the service ran at about 99.9% uptime.</li>
+          <li>Reworked payment workflows, retries and error handling, helping lift transaction success rates by about 25%.</li>
           <li>Optimised backend queries and load balancing for high-concurrency payment traffic.</li>
           <li>Built front ends in React and Angular.</li>
         </ul>
@@ -334,11 +337,11 @@ nav.top a.hire.on{color:var(--on-accent);background:var(--accent)}
         <div class="co">ISITCA <span style="color:var(--muted);font-weight:400">· early-stage startup · led a team of 10 engineers</span></div>
         <ul class="pts">
           <li>Gathered requirements with clients, planned sprints, estimated and distributed tasks.</li>
-          <li>Owned the architecture and the software development lifecycle through to delivery, contributing to a 30% cut in time-to-market.</li>
+          <li>Owned the architecture and the software development lifecycle through to delivery, contributing to a roughly 30% cut in time-to-market.</li>
           <li>Hired and interviewed engineers, ran performance reviews, mentored the team and reviewed their code.</li>
           <li>Migrated a monolith to microservices.</li>
-          <li>Set up CI/CD with Jenkins and Docker, cutting deployment time roughly in half.</li>
-          <li>Automated testing with Jest and Cypress, raising coverage by about 25%.</li>
+          <li>Set up CI/CD with Jenkins and Docker, helping roughly halve deployment time.</li>
+          <li>Automated testing with Jest and Cypress, helping raise coverage by about 25%.</li>
           <li>Built front ends in React and Angular.</li>
         </ul>
       </article>
@@ -422,19 +425,41 @@ nav.top a.hire.on{color:var(--on-accent);background:var(--accent)}
         </div>
       </div>
     </article>
+    <article class="feature" aria-labelledby="pay-h">
+      <div class="fbody">
+        <div class="fhead">
+          <div>
+            <span class="label">Payment reliability · Step Set Go</span>
+            <h3 id="pay-h">Payment gateway failover</h3>
+            <p class="sub">2021 – 2022 · Razorpay and Paytm</p>
+          </div>
+          <div>
+          <div class="stats two">
+            <div><b>~99.9%</b><span>Service uptime</span></div>
+            <div><b>~25%</b><span>Higher transaction success</span></div>
+          </div>
+          <p class="statnote">Team results, shown as approximate figures.</p>
+          </div>
+        </div>
+        <p class="intro">Payments ran through Razorpay and Paytm. I built high-availability payment services with a precomputed view of gateway availability, so transactions reroute automatically when a gateway has an outage.</p>
+        <ul class="feats">
+          <li><b>Automatic failover</b>A precomputed gateway-availability check reroutes transactions to a working gateway during outages.</li>
+          <li><b>Fewer failed payments</b>Reworked payment workflows, retry logic and error handling, helping lift transaction success rates by about 25%.</li>
+          <li><b>Built for peak traffic</b>Optimised backend queries and load balancing for high-concurrency payment traffic.</li>
+        </ul>
+      </div>
+    </article>
   </section>
 
   <section id="services" aria-labelledby="svc-h">
     <div class="eyebrow label">Services</div>
     <h2 class="sec-title" id="svc-h">How I can help</h2>
     <div class="svcs">
-      <div class="svc w3"><h3>Architecture reviews</h3><p>A review of your architecture, data model and scalability risks, with a prioritised plan to fix what matters.</p></div>
-      <div class="svc w3"><h3>Backend and platform</h3><p>APIs, NestJS microservices, queues, databases and integrations built for production.</p></div>
-      <div class="svc"><h3>AI features and automation</h3><p>LLM integrations, assistants grounded in your own data, provider fallback, and automating repetitive work with AI.</p></div>
-      <div class="svc"><h3>MVP build and delivery</h3><p>From spec to production: build, test, deploy and hand over.</p></div>
-      <div class="svc"><h3>Websites and CRMs</h3><p>Business websites, online stores and CRMs, built and deployed for you.</p></div>
+      <div class="svc"><h3>Backend and cloud architecture</h3><p>APIs, NestJS microservices, queues, databases and cloud infrastructure built for production, or a review of what you have with a prioritised plan to fix what matters.</p></div>
+      <div class="svc"><h3>AI integrations and automation</h3><p>LLM features and assistants grounded in your own data, with provider fallback, plus automating repetitive business work with AI.</p></div>
+      <div class="svc"><h3>End-to-end MVP delivery</h3><p>From requirements to production: scope, build, test, deploy and hand over.</p></div>
     </div>
-    <p class="svc-more">Need something else? If it's software, <a href="#contact">ask</a>. I pick up new tools quickly.</p>
+    <p class="svc-more">Also: architecture reviews, business websites, online stores and CRMs. If it's software, <a href="#contact">ask</a>. I pick up new tools quickly.</p>
   </section>
 
   <section id="contact" class="closing" aria-labelledby="contact-h" style="padding-top:72px">
@@ -443,7 +468,7 @@ nav.top a.hire.on{color:var(--on-accent);background:var(--accent)}
     <p>Open to all types of work, remote. I pick up new tools quickly and take projects from first spec to production.</p>
     <div class="paths">
       <div><span class="label">Hiring</span><p>Senior full-stack and technical leadership roles. 9+ years, remote in every role.</p></div>
-      <div><span class="label">Consulting</span><p>Architecture reviews, backends, AI features and automation, MVPs, websites and CRMs. <a href="#services">See services</a>.</p></div>
+      <div><span class="label">Consulting</span><p>Backend and cloud architecture, AI integrations and automation, and end-to-end MVP delivery. <a href="#services">See services</a>.</p></div>
     </div>
     <div class="cta" style="justify-content:center">
       <a class="btn primary" href="mailto:prasadmpotdar22@gmail.com?subject=Project%20enquiry">Email about a project</a>

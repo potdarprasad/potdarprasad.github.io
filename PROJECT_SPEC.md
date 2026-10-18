@@ -31,7 +31,7 @@ Only use facts below. Do not invent employers, dates, metrics, skills, testimoni
 - Do NOT publish: date of birth, any other email address, exact city, family details.
 
 **Experience**
-Source for dates, titles and figures below: Prasad's CV (`Prasad_Potdar_Resume_Revised.docx`, local only, git-ignored). Never publish its phone number, city or university.
+CV figures are shown softened, as approximate team results ("helping", "about", "contributing to"), at Prasad's request. Source for dates, titles and figures below: Prasad's CV (`Prasad_Potdar_Resume_Revised.docx`, local only, git-ignored). Never publish its phone number, city or university.
 - Political Data Intelligence, via VoterCircle India (Mar 2022 to present): NestJS microservices on a shared-libraries architecture; background and async processing on RabbitMQ and BullMQ; serverless infrastructure as code with Pulumi; Flutter apps with a custom architecture using Provider and BLoC; formal architecture reviews as part of technical leadership; Kubernetes and CI/CD pipelines. From the CV: API response times cut by up to 40% under peak load (GraphQL/REST, data access, caching); Docker/Kubernetes on Jenkins CI/CD cut deployment time roughly in half; worked directly with product on scoping and delivery.
 - ISITCA (Jul 2019 to Jul 2021, title Full Stack Developer; from the CV: 30% cut in time-to-market, monolith to microservices, Jenkins/Docker CI/CD halving deploy time, Jest/Cypress coverage up ~25%, performance reviews; early-stage startup, remote): led a team of 10 engineers. Owned requirement gathering, planning, estimates and task distribution; architecture and the software development lifecycle through to delivery; code reviews; mentoring and interviewing. The product is confidential: do not describe it.
 - Step Set Go (Jul 2021 to Mar 2022, Full Stack Developer, remote): payment services on Razorpay and Paytm with automatic gateway failover, 99.9% uptime; transaction success up ~25%; high-concurrency query and load-balancing work; React and Angular front ends.
@@ -67,11 +67,11 @@ Source for dates, titles and figures below: Prasad's CV (`Prasad_Potdar_Resume_R
 
 ## Page structure
 1. Sticky pill nav (`~/prasad-potdar` with blinking cursor, links, "Hire me"). Services hides under 520 px, Work under 400 px.
-2. Hero: `$ whoami`, name, "Senior Full Stack Developer at Political Data Intelligence", rotating "I build ..." line (starts broad: "full-stack products, end to end"), lead copy, two buttons for the two visitor paths ("Discuss a project" for clients, "Hiring? See my experience" for recruiters), legend for the code background. Right side: `profile.json` at-a-glance panel.
+2. Hero: `$ whoami`, name, "Senior Full Stack Developer at Political Data Intelligence", rotating "I build ..." line (starts broad: "full-stack products, end to end"), lead copy (outcome first: "I build production software that solves real business problems."), two buttons for the two visitor paths ("Discuss a project" for clients, "Hiring? See my experience" for recruiters), legend for the code background. Right side: `profile.json` at-a-glance panel.
 3. Experience timeline. Current role bullets are grouped under three themes: Architecture and backend, Cloud and delivery, Leadership and mobile.
 4. Stack bento grid, "AI engineering" as the featured tile: practice chips first, provider names in a smaller secondary row, Agentic AI under Learning.
-5. Selected work: Vasundhara Nature Studio card, with a row of three screenshots linking to the live pages.
-6. Services: "How I can help", five service cards and a line inviting other software work.
+5. Selected work: Vasundhara Nature Studio card, with a row of three screenshots linking to the live pages; then a smaller "Payment gateway failover" card (Step Set Go, CV facts only, no stack chips). No separate case-study page (Prasad declined, 2026-10-18).
+6. Services: "How I can help", three core cards (Backend and cloud architecture, AI integrations and automation, End-to-end MVP delivery) and an "Also" line (architecture reviews, websites, online stores, CRMs, anything in software).
 7. Contact: closing card with two path cards (Hiring, Consulting), "Email about a project" / "Email about a role" (mailto with subject) and LinkedIn, then footer. "Open to all types of work" appears once here and once in profile.json, not in the hero.
 
 ## Design system
