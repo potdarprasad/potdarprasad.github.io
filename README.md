@@ -6,7 +6,7 @@ A single static page: `index.html`, plus two images (`vasundhara.webp` for the p
 
 ### A. GitHub Pages (the chosen host, see `PROJECT_SPEC.md`)
 1. Create a public repo named `<username>.github.io`.
-2. Commit `index.html`, `vasundhara.webp`, `og.png`, `robots.txt`, `sitemap.xml`, `README.md`, `PROJECT_SPEC.md`, `CLAUDE.md` to `main`.
+2. Commit `index.html`, `vasundhara.webp`, `vns-*.webp`, `og.png`, `robots.txt`, `sitemap.xml`, `README.md`, `PROJECT_SPEC.md`, `CLAUDE.md` to `main`.
 3. Settings -> Pages -> Deploy from a branch -> `main` / `(root)`.
 4. Site appears at `https://<username>.github.io/`.
 
