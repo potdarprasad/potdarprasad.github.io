@@ -90,6 +90,8 @@ h1{font-size:clamp(3.4rem,9vw,7.2rem);font-weight:800;letter-spacing:-.05em;line
 .cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:4px}
 .btn{display:inline-flex;align-items:center;gap:10px;padding:16px 26px;border-radius:999px;text-decoration:none;font:500 14px/1 var(--mono);border:1px solid var(--line);background:var(--surface);color:var(--fg);transition:transform .2s,border-color .2s,filter .2s}
 .btn:hover{transform:translateY(-2px);border-color:var(--accent)}
+button.btn{cursor:pointer}
+.btn:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
 .btn.primary{background:var(--accent);border-color:var(--accent);color:var(--on-accent)}
 .btn.primary:hover{filter:brightness(1.08)}
 
@@ -197,12 +199,20 @@ section{padding-top:128px;scroll-margin-top:72px}
 .svc{grid-column:span 2;background:var(--surface);border:1px solid var(--line);border-radius:24px;padding:28px;min-width:0;box-shadow:var(--shadow);transition:transform .25s,border-color .25s}
 .svc.w3{grid-column:span 3}
 .svc:hover{transform:translateY(-3px);border-color:color-mix(in srgb,var(--accent2) 55%,var(--line))}
-.svc h3{font-size:1.3rem;font-weight:600;letter-spacing:-.01em;margin-bottom:10px}
+.svc h3{font-size:1.3rem;font-weight:600;letter-spacing:-.01em;line-height:1.25;margin-bottom:10px}
 .svc p{font-size:1rem;line-height:1.6}
 .svc-more{margin-top:24px;color:var(--muted)}
 .svc-more a{color:var(--accent)}
-@media (max-width:860px){.svcs{grid-template-columns:repeat(2,minmax(0,1fr))}.svc,.svc.w3{grid-column:span 1}}
-@media (max-width:560px){.svcs{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:860px){.svcs{grid-template-columns:repeat(2,minmax(0,1fr))}.svc,.svc.w3{grid-column:span 1}.svc:last-child{grid-column:span 2}}
+@media (max-width:560px){.svcs{grid-template-columns:minmax(0,1fr)}.svc:last-child{grid-column:span 1}}
+
+.steps-h{margin-top:56px;font-size:1.5rem;font-weight:800;letter-spacing:-.02em}
+.steps{list-style:none;margin:20px 0 0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;counter-reset:step}
+.steps li{counter-increment:step;border-top:2px solid var(--line);padding-top:16px;font-size:1rem;line-height:1.6;min-width:0}
+.steps li::before{content:counter(step,decimal-leading-zero);display:block;margin-bottom:10px;font:500 13px/1 var(--mono);color:var(--accent2)}
+.steps b{display:block;color:var(--fg);font-weight:600;margin-bottom:4px}
+@media (max-width:860px){.steps{grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 16px}}
+@media (max-width:480px){.steps{grid-template-columns:minmax(0,1fr)}}
 
 /* closing */
 .closing{margin-top:128px;border-radius:32px;padding:72px 40px;background:radial-gradient(600px 300px at 50% 0%,var(--glow),transparent 70%),var(--surface);border:1px solid var(--line);text-align:center;display:flex;flex-direction:column;align-items:center;gap:24px}
@@ -286,7 +296,7 @@ nav.top a.hire.on{color:var(--on-accent);background:var(--accent)}
         <div><dt>Domains</dt><dd>Fintech · Civic tech · Startups</dd></div>
         <div><dt>Core stack</dt><dd>NestJS · React · PostgreSQL · AWS</dd></div>
         <div><dt>AI</dt><dd>Claude · OpenAI · RAG · Spec-driven development</dd></div>
-        <div><dt>Availability</dt><dd>Open to all types of work<small>Projects, roles and consultation · Remote</small></dd></div>
+        <div><dt>Availability</dt><dd>Open to all types of work<small>Projects, roles and consultation · Remote · IST (UTC+5:30), flexible for other time zones</small></dd></div>
       </dl>
     </aside>
   </header>
@@ -451,24 +461,34 @@ nav.top a.hire.on{color:var(--on-accent);background:var(--accent)}
     <div class="eyebrow label">Services</div>
     <h2 class="sec-title" id="svc-h">How I can help</h2>
     <div class="svcs">
+      <div class="svc w3"><h3>Web app development</h3><p>Web apps, portals and dashboards in React, Next.js and Angular, with the APIs, databases and sign-in behind them.</p></div>
+      <div class="svc w3"><h3>Mobile app development</h3><p>Cross-platform mobile apps in Flutter and React Native, on a clean Provider or BLoC architecture and connected to your backend.</p></div>
       <div class="svc"><h3>Backend and cloud architecture</h3><p>APIs, NestJS microservices, queues, databases and cloud infrastructure built for production, or a review of what you have with a prioritised plan to fix what matters.</p></div>
       <div class="svc"><h3>AI integrations and automation</h3><p>LLM features and assistants grounded in your own data, with provider fallback, plus automating repetitive business work with AI.</p></div>
       <div class="svc"><h3>End-to-end MVP delivery</h3><p>Scoping, build, testing, deployment and handover, taking a product from requirements to production.</p></div>
     </div>
     <p class="svc-more">Also: architecture reviews, business websites, online stores and CRMs. If it's software, <a href="#contact">ask</a>. I pick up new tools quickly.</p>
+    <h3 class="steps-h">How I work</h3>
+    <ol class="steps">
+      <li><b>Free intro call</b>We talk through the problem, goals and constraints, with no commitment.</li>
+      <li><b>Scope and estimate</b>You get a written scope, estimate and timeline before any work starts.</li>
+      <li><b>Build in milestones</b>Work ships in milestones with regular demos, so you see progress and can steer.</li>
+      <li><b>Deploy and hand over</b>I deploy to production, hand over the code and docs, and support you after launch.</li>
+    </ol>
   </section>
 
   <section id="contact" class="closing" aria-labelledby="contact-h" style="padding-top:72px">
     <span class="label">Contact</span>
     <h2 id="contact-h">Have something to build?</h2>
-    <p>Open to all types of work, remote. I pick up new tools quickly and take projects from first spec to production.</p>
+    <p>Open to all types of work, remote. Based in IST (UTC+5:30) and happy to work with teams in other time zones. I pick up new tools quickly and take projects from first spec to production.</p>
     <div class="paths">
       <div><span class="label">Hiring</span><p>Senior full-stack and technical leadership roles. 9+ years, remote in every role.</p></div>
-      <div><span class="label">Consulting</span><p>Backend and cloud architecture, AI integrations and automation, and end-to-end MVP delivery. <a href="#services">See services</a>.</p></div>
+      <div><span class="label">Consulting</span><p>Web and mobile apps, backend and cloud architecture, AI integrations and automation, and end-to-end MVP delivery. <a href="#services">See services</a>.</p></div>
     </div>
     <div class="cta" style="justify-content:center">
       <a class="btn primary" href="mailto:prasadmpotdar22@gmail.com?subject=Project%20enquiry">Email about a project</a>
       <a class="btn" href="mailto:prasadmpotdar22@gmail.com?subject=Role%20opportunity">Email about a role</a>
+      <button class="btn" type="button" id="copy-email" data-email="prasadmpotdar22@gmail.com">Copy email</button>
       <a class="btn" href="https://www.linkedin.com/in/prasad-potdar-b43a5412a" target="_blank" rel="noopener">Message me on LinkedIn</a>
     </div>
   </section>
@@ -537,6 +557,16 @@ nav.top a.hire.on{color:var(--on-accent);background:var(--accent)}
     if('IntersectionObserver' in window){new IntersectionObserver(function(es){onScreen=es[0].isIntersecting;onScreen&&!d.hidden?start():stop();}).observe(cv);}else{start();}
     d.addEventListener('visibilitychange',function(){d.hidden||!onScreen?stop():start();});
   })();
+
+  /* copy email: falls back to showing the address if the clipboard is blocked */
+  var cp=d.getElementById('copy-email');
+  if(cp)cp.addEventListener('click',function(){
+    var em=cp.getAttribute('data-email');
+    function shown(){cp.textContent=em;}
+    if(navigator.clipboard&&navigator.clipboard.writeText){
+      navigator.clipboard.writeText(em).then(function(){cp.textContent='Email copied';setTimeout(function(){cp.textContent='Copy email';},2000);},shown);
+    }else shown();
+  });
 
   if(rm)return;
 

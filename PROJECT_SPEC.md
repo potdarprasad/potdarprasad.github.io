@@ -24,7 +24,7 @@ Only use facts below. Do not invent employers, dates, metrics, skills, testimoni
 **Identity**
 - Prasad Potdar, Senior Full Stack Developer at Political Data Intelligence (remote), since Mar 2022. Employed through VoterCircle India Private Limited (Bangalore), its Indian subsidiary. Lead with "Political Data Intelligence" everywhere; mention VoterCircle only as the subsidiary.
 - 9+ years of professional experience, career start Aug 2017.
-- Remote in every role. Based in Maharashtra, India.
+- Remote in every role. Based in Maharashtra, India. Based in IST (UTC+5:30) and open to working with other time zones; both shown in profile.json and contact.
 - Open to all types of work, and open for consultation.
 - LinkedIn: https://www.linkedin.com/in/prasad-potdar-b43a5412a
 - Public contact email: prasadmpotdar22@gmail.com (Prasad chose to publish it). Shown in the contact card and footer.
@@ -39,7 +39,7 @@ CV figures are shown softened, as approximate team results ("helping", "about", 
 - No résumé PDF: LinkedIn is the full career history ("Full career history on LinkedIn" link under the timeline).
 
 **Services (confirmed by Prasad, 2026-10-18; employer allows outside paid work)**
-- Architecture reviews, Backend and platform, AI features and automation, MVP build and delivery, Websites and CRMs, plus "anything else in software".
+- Web app development, Mobile app development (added 2026-10-26), Architecture reviews, Backend and platform, AI features and automation, MVP build and delivery, Websites and CRMs, plus "anything else in software".
 
 **Stack (all confirmed by Prasad; CV additions marked in the open items)**
 - AI: Claude, OpenAI, Groq, Google Gemini, OpenRouter, RAG, Vercel AI SDK, spec-driven development. Learning: Agentic AI. ("Grok" was replaced by Groq, the provider actually used in Vasundhara.)
@@ -71,8 +71,8 @@ CV figures are shown softened, as approximate team results ("helping", "about", 
 3. Experience timeline. Current role bullets are grouped under three themes: Architecture and backend, Cloud and delivery, Leadership and mobile.
 4. Stack bento grid, "AI engineering" as the featured tile: practice chips first, provider names in a smaller secondary row, Agentic AI under Learning.
 5. Selected work: Vasundhara Nature Studio card, with a row of three screenshots linking to the live pages; then a smaller "Payment gateway failover" card (Step Set Go, CV facts only, no stack chips). No separate case-study page (Prasad declined, 2026-10-18).
-6. Services: "How I can help", three core cards (Backend and cloud architecture, AI integrations and automation, End-to-end MVP delivery) and an "Also" line (architecture reviews, websites, online stores, CRMs, anything in software).
-7. Contact: closing card with two path cards (Hiring, Consulting), "Email about a project" / "Email about a role" (mailto with subject) and LinkedIn, then footer. "Open to all types of work" appears once here and once in profile.json, not in the hero.
+6. Services: "How I can help", five cards: Web app development and Mobile app development (wide, first row), then Backend and cloud architecture, AI integrations and automation, End-to-end MVP delivery and an "Also" line (architecture reviews, websites, online stores, CRMs, anything in software). Then "How I work", four numbered steps confirmed by Prasad (2026-10-26): free intro call; written scope, estimate and timeline; build in milestones with regular demos; deploy, hand over code and docs, support after launch.
+7. Contact: closing card with two path cards (Hiring, Consulting), "Email about a project" / "Email about a role" (mailto with subject), "Copy email" (clipboard, falls back to showing the address) and LinkedIn, then footer. "Open to all types of work" appears once here and once in profile.json, not in the hero.
 
 ## Design system
 Dark first, light follows `prefers-color-scheme`. All colours are CSS variables on `:root`.
