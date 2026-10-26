@@ -33,7 +33,7 @@ Only use facts below. Do not invent employers, dates, metrics, skills, testimoni
 **Experience**
 CV figures are shown softened, as approximate team results ("helping", "about", "contributing to"), at Prasad's request. Source for dates, titles and figures below: Prasad's CV (`Prasad_Potdar_Resume_Revised.docx`, local only, git-ignored). Never publish its phone number, city or university.
 - Political Data Intelligence, via VoterCircle India (Mar 2022 to present): NestJS microservices on a shared-libraries architecture; background and async processing on RabbitMQ and BullMQ; serverless infrastructure as code with Pulumi; Flutter apps with a custom architecture using Provider and BLoC; formal architecture reviews as part of technical leadership; Kubernetes and CI/CD pipelines. From the CV: API response times cut by up to 40% under peak load (GraphQL/REST, data access, caching); Docker/Kubernetes on Jenkins CI/CD cut deployment time roughly in half; worked directly with product on scoping and delivery.
-- ISITCA (Jul 2019 to Jul 2021, title Full Stack Developer; from the CV: 30% cut in time-to-market, monolith to microservices, Jenkins/Docker CI/CD halving deploy time, Jest/Cypress coverage up ~25%, performance reviews; early-stage startup, remote): led a team of 10 engineers. Owned requirement gathering, planning, estimates and task distribution; architecture and the software development lifecycle through to delivery; code reviews; mentoring and interviewing. The product is confidential: do not describe it.
+- ISITCA (Jul 2019 to Jul 2021, title Full Stack Developer; from the CV: 30% cut in time-to-market, monolith to microservices, Jenkins/Docker CI/CD halving deploy time, Jest/Cypress coverage up ~25%, performance reviews; early-stage startup, remote): team lead. Do not show the team size ("10 engineers") on the page, at Prasad's request (2026-10-26); present it as technical leadership. Owned requirement gathering, planning, estimates and task distribution; architecture and the software development lifecycle through to delivery; code reviews; mentoring and interviewing. The product is confidential: do not describe it.
 - Step Set Go (Jul 2021 to Mar 2022, Full Stack Developer, remote): payment services on Razorpay and Paytm with automatic gateway failover, 99.9% uptime; transaction success up ~25%; high-concurrency query and load-balancing work; React and Angular front ends.
 - Freelance, Full Stack and Mobile Developer (Aug 2017 to Jul 2019, remote): client web and mobile apps in Node.js, PHP/Laravel, React, Flutter; requirement analysis with clients; mentored interns.
 - No résumé PDF: LinkedIn is the full career history ("Full career history on LinkedIn" link under the timeline).
@@ -84,15 +84,15 @@ Dark first, light follows `prefers-color-scheme`. All colours are CSS variables 
 | `--surface2` | `#162038` | `#eaeff9` |
 | `--fg` | `#f2f5fc` | `#0a1022` |
 | `--body` | `#b4bdd2` | `#424b63` |
-| `--muted` | `#7a869f` | `#68728b` |
+| `--muted` | `#8390a8` | `#5f6982` |
 | `--line` | `#1f2a44` | `#dbe1ef` |
 | `--accent` | `#8aa2ff` | `#3550f0` |
-| `--accent2` | `#6fe0c9` | `#0e9c88` |
+| `--accent2` | `#6fe0c9` | `#0a806f` |
 
 Type: display `Bricolage Grotesque` (800 for headings), body `Geist`, labels and code `Geist Mono`. Section labels are written like comments (`// Experience`).
 
 ## Motion (keep it calm)
-Only these animate: hero fade-in, rotating "I build" line, top scroll-progress line, nav active state, scroll reveal on sections, pointer spotlight on stack panels, hover lifts, blinking nav cursor, and the drifting code canvas behind the hero (classic code in `--accent2`, modern in `--accent`). All of it must switch off under `prefers-reduced-motion`. The canvas pauses when off-screen or the tab is hidden. Do not add more moving elements.
+Only these animate: hero fade-in, rotating "I build" line, top scroll-progress line, nav active state, pointer spotlight on stack panels, hover lifts, blinking nav cursor, and the drifting code canvas behind the hero (classic code in `--accent2`, modern in `--accent`). All of it must switch off under `prefers-reduced-motion`. The canvas pauses when off-screen or the tab is hidden. Do not add more moving elements.
 
 ## Quality bar
 - No horizontal scroll at 360 px width.

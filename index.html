@@ -27,7 +27,7 @@
 <style>
 /* Layout: calm, CV-first. Hero = name + current title on the left, an "at a glance" spec sheet on the right so a visitor reads role, tenure, leadership and availability in seconds. Then experience, stack (AI featured), one project, contact. Motion is limited to the list in PROJECT_SPEC.md and all of it switches off under prefers-reduced-motion. */
 :root{
-  --bg:#090e1a; --surface:#0f1626; --surface2:#162038; --fg:#f2f5fc; --body:#b4bdd2; --muted:#7a869f; --line:#1f2a44;
+  --bg:#090e1a; --surface:#0f1626; --surface2:#162038; --fg:#f2f5fc; --body:#b4bdd2; --muted:#8390a8; --line:#1f2a44;
   --accent:#8aa2ff; --accent2:#6fe0c9; --on-accent:#0a1130; --glow:rgba(138,162,255,.16); --grid:rgba(138,162,255,.07);
   --shadow:0 1px 0 rgba(255,255,255,.03) inset,0 24px 48px -28px rgba(0,0,0,.7);
   --display:'Bricolage Grotesque','Segoe UI',system-ui,sans-serif;
@@ -35,8 +35,8 @@
   --mono:'Geist Mono',ui-monospace,Menlo,Consolas,monospace;
   color-scheme:dark;
 }
-@media (prefers-color-scheme: light){:root:not([data-theme="dark"]){--bg:#f5f7fc; --surface:#ffffff; --surface2:#eaeff9; --fg:#0a1022; --body:#424b63; --muted:#68728b; --line:#dbe1ef; --accent:#3550f0; --accent2:#0e9c88; --on-accent:#ffffff; --glow:rgba(53,80,240,.12); --grid:rgba(53,80,240,.07); --shadow:0 1px 2px rgba(10,16,34,.04),0 16px 36px -20px rgba(10,16,34,.16); color-scheme:light}}
-:root[data-theme="light"]{--bg:#f5f7fc; --surface:#ffffff; --surface2:#eaeff9; --fg:#0a1022; --body:#424b63; --muted:#68728b; --line:#dbe1ef; --accent:#3550f0; --accent2:#0e9c88; --on-accent:#ffffff; --glow:rgba(53,80,240,.12); --grid:rgba(53,80,240,.07); --shadow:0 1px 2px rgba(10,16,34,.04),0 16px 36px -20px rgba(10,16,34,.16); color-scheme:light}
+@media (prefers-color-scheme: light){:root:not([data-theme="dark"]){--bg:#f5f7fc; --surface:#ffffff; --surface2:#eaeff9; --fg:#0a1022; --body:#424b63; --muted:#5f6982; --line:#dbe1ef; --accent:#3550f0; --accent2:#0a806f; --on-accent:#ffffff; --glow:rgba(53,80,240,.12); --grid:rgba(53,80,240,.07); --shadow:0 1px 2px rgba(10,16,34,.04),0 16px 36px -20px rgba(10,16,34,.16); color-scheme:light}}
+:root[data-theme="light"]{--bg:#f5f7fc; --surface:#ffffff; --surface2:#eaeff9; --fg:#0a1022; --body:#424b63; --muted:#5f6982; --line:#dbe1ef; --accent:#3550f0; --accent2:#0a806f; --on-accent:#ffffff; --glow:rgba(53,80,240,.12); --grid:rgba(53,80,240,.07); --shadow:0 1px 2px rgba(10,16,34,.04),0 16px 36px -20px rgba(10,16,34,.16); color-scheme:light}
 
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;overflow-x:clip}
@@ -84,7 +84,6 @@ nav.top a.hire:hover{color:var(--on-accent);filter:brightness(1.08)}
 .hero{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:48px;align-items:center;padding:96px 0 40px}
 .hero-copy{display:flex;flex-direction:column;gap:28px;min-width:0;animation:up .9s cubic-bezier(.2,.7,.2,1) both}
 h1{font-size:clamp(3.4rem,9vw,7.2rem);font-weight:800;letter-spacing:-.05em;line-height:.9}
-h1 span{background:linear-gradient(100deg,var(--accent),var(--accent2));-webkit-background-clip:text;background-clip:text;color:transparent;padding-bottom:.08em}
 .role{font:600 clamp(1.4rem,3vw,2.1rem)/1.2 var(--display);letter-spacing:-.025em;color:var(--fg)}
 .role em{font-style:normal;color:var(--muted);font-weight:400}
 .lead{max-width:46ch;font-size:clamp(1.1rem,2.2vw,1.3rem);line-height:1.6}
@@ -227,8 +226,6 @@ footer .links a{overflow-wrap:anywhere}
 /* purposeful motion: scroll reveal, role rotator, progress line, active nav, panel spotlight */
 .progress{position:fixed;left:0;right:0;top:env(safe-area-inset-top,0px);height:3px;z-index:50;pointer-events:none}
 .progress i{display:block;height:100%;background:linear-gradient(90deg,var(--accent),var(--accent2));transform:scaleX(0);transform-origin:0 50%}
-.js .rv{opacity:0;transform:translateY(24px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1)}
-.js .rv.in{opacity:1;transform:none}
 .focus{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 14px;font:600 clamp(1.15rem,2.4vw,1.5rem)/1.3 var(--display);letter-spacing:-.02em;color:var(--fg)}
 .focus .label{letter-spacing:.14em}
 .rot{display:inline-block;color:var(--accent);transition:opacity .35s ease,transform .35s ease}
@@ -245,7 +242,6 @@ nav.top a.hire.on{color:var(--on-accent);background:var(--accent)}
 .job:hover{border-color:color-mix(in srgb,var(--accent) 45%,var(--line))}
 .chips span{transition:transform .2s,border-color .2s}
 .chips span:hover{transform:translateY(-2px);border-color:var(--accent)}
-@media (prefers-reduced-motion:reduce){.js .rv{opacity:1;transform:none}}
 @keyframes up{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
 </style>
@@ -271,12 +267,12 @@ nav.top a.hire.on{color:var(--on-accent);background:var(--accent)}
   <header class="hero">
     <div class="hero-copy">
       <p class="prompt"><b>$</b>whoami</p>
-      <h1>Prasad <span>Potdar</span></h1>
+      <h1>Prasad Potdar</h1>
       <p class="role">Senior Full Stack Developer <em>at Political Data Intelligence</em></p>
       <p class="focus"><span class="label">I build</span><span class="rot" id="rot">full-stack products, end to end</span></p>
       <p class="lead">I build production software that solves real business problems. 9+ years across backend systems, web and mobile apps, cloud and AI, from requirements to production, including technical leadership.</p>
       <div class="cta">
-        <a class="btn primary" href="#contact">Discuss a project →</a>
+        <a class="btn primary" href="#contact">Discuss a project</a>
         <a class="btn" href="#experience">Hiring? See my experience</a>
       </div>
       <p class="legend"><i class="o"></i>classic<i class="n"></i>modern<span>// decorative background</span></p>
@@ -286,7 +282,7 @@ nav.top a.hire.on{color:var(--on-accent);background:var(--accent)}
       <dl>
         <div><dt>Role</dt><dd>Senior Full Stack Developer<small>Political Data Intelligence · Remote</small></dd></div>
         <div><dt>Experience</dt><dd>9+ years<small>Professional career since Aug 2017</small></dd></div>
-        <div><dt>Leadership</dt><dd>Led a team of 10 engineers<small>Early-stage startup · architecture reviews</small></dd></div>
+        <div><dt>Leadership</dt><dd>Team lead at an early-stage startup<small>Architecture and code reviews · hiring and mentoring</small></dd></div>
         <div><dt>Domains</dt><dd>Fintech · Civic tech · Startups</dd></div>
         <div><dt>Core stack</dt><dd>NestJS · React · PostgreSQL · AWS</dd></div>
         <div><dt>AI</dt><dd>Claude · OpenAI · RAG · Spec-driven development</dd></div>
@@ -300,7 +296,7 @@ nav.top a.hire.on{color:var(--on-accent);background:var(--accent)}
     <h2 class="sec-title" id="exp-h">Where I've been building</h2>
     <div class="tl">
       <article class="job">
-        <div class="label">Mar 2022 – Present · Bangalore · Remote<span class="now">CURRENT</span></div>
+        <div class="label">Mar 2022 – Present · Remote<span class="now">CURRENT</span></div>
         <h3>Senior Full Stack Developer</h3>
         <div class="co">Political Data Intelligence <span style="color:var(--muted);font-weight:400">· via VoterCircle India Private Limited, its Indian subsidiary</span></div>
         <div class="groups">
@@ -334,7 +330,7 @@ nav.top a.hire.on{color:var(--on-accent);background:var(--accent)}
       <article class="job past">
         <div class="label">Jul 2019 – Jul 2021 · Remote</div>
         <h3>Full Stack Developer</h3>
-        <div class="co">ISITCA <span style="color:var(--muted);font-weight:400">· early-stage startup · led a team of 10 engineers</span></div>
+        <div class="co">ISITCA <span style="color:var(--muted);font-weight:400">· early-stage startup · team lead</span></div>
         <ul class="pts">
           <li>Gathered requirements with clients, planned sprints, estimated and distributed tasks.</li>
           <li>Owned the architecture and the software development lifecycle through to delivery, contributing to a roughly 30% cut in time-to-market.</li>
@@ -355,7 +351,7 @@ nav.top a.hire.on{color:var(--on-accent);background:var(--accent)}
           <li>Mentored interns on technical skills and code quality.</li>
         </ul>
       </article>
-      <div class="also"><span>Education <b>B.E., Computer Science and Engineering · 2017</b></span><a class="li" href="https://www.linkedin.com/in/prasad-potdar-b43a5412a" target="_blank" rel="noopener">Full career history on LinkedIn ↗</a></div>
+      <div class="also"><span>Education <b>B.E., Computer Science and Engineering · 2017</b></span><a class="li" href="https://www.linkedin.com/in/prasad-potdar-b43a5412a" target="_blank" rel="noopener">Full career history on LinkedIn</a></div>
     </div>
   </section>
 
@@ -406,7 +402,7 @@ nav.top a.hire.on{color:var(--on-accent);background:var(--accent)}
           <li><b>One pricing engine</b>Options, offers, coupons and bundles go through a single function shared by the cart, delivery estimate and final order, so totals always match.</li>
         </ul>
         <div class="shots">
-          <figure><a href="https://vasundharanaturestudio.com/shop" target="_blank" rel="noopener"><img src="vns-shop.webp" width="1200" height="750" loading="lazy" decoding="async" alt="Shop page with category filters, in-stock badges and a prompt to ask Vasu, the AI guide, for picks from current stock"></a><figcaption>Shop: live stock, AI picks</figcaption></figure>
+          <figure><a href="https://vasundharanaturestudio.com/shop" target="_blank" rel="noopener"><img src="vns-shop.webp" width="1200" height="750" loading="lazy" decoding="async" alt="Shop page with category filters, in-stock badges and a prompt to ask Vasu, the AI guide, for picks from current stock"></a><figcaption>Shop with live stock and AI picks</figcaption></figure>
           <figure><a href="https://vasundharanaturestudio.com/plan-my-tank" target="_blank" rel="noopener"><img src="vns-planner.webp" width="1200" height="750" loading="lazy" decoding="async" alt="Tank planner landing page with an example plan listing temperature, pH, light and a fish list"></a><figcaption>AI tank planner</figcaption></figure>
           <figure><a href="https://vasundharanaturestudio.com/shop/discus-red-turquoise" target="_blank" rel="noopener"><img src="vns-product.webp" width="1200" height="750" loading="lazy" decoding="async" alt="Product page for a discus fish showing price, stock status, care parameters and add to cart"></a><figcaption>Product page with care data</figcaption></figure>
         </div>
@@ -421,7 +417,7 @@ nav.top a.hire.on{color:var(--on-accent);background:var(--accent)}
           </div>
         </div>
         <div class="ffoot">
-          <a class="btn primary" href="https://vasundharanaturestudio.com" target="_blank" rel="noopener">Visit the live site ↗</a>
+          <a class="btn primary" href="https://vasundharanaturestudio.com" target="_blank" rel="noopener">Visit the live site</a>
         </div>
       </div>
     </article>
@@ -457,7 +453,7 @@ nav.top a.hire.on{color:var(--on-accent);background:var(--accent)}
     <div class="svcs">
       <div class="svc"><h3>Backend and cloud architecture</h3><p>APIs, NestJS microservices, queues, databases and cloud infrastructure built for production, or a review of what you have with a prioritised plan to fix what matters.</p></div>
       <div class="svc"><h3>AI integrations and automation</h3><p>LLM features and assistants grounded in your own data, with provider fallback, plus automating repetitive business work with AI.</p></div>
-      <div class="svc"><h3>End-to-end MVP delivery</h3><p>From requirements to production: scope, build, test, deploy and hand over.</p></div>
+      <div class="svc"><h3>End-to-end MVP delivery</h3><p>Scoping, build, testing, deployment and handover, taking a product from requirements to production.</p></div>
     </div>
     <p class="svc-more">Also: architecture reviews, business websites, online stores and CRMs. If it's software, <a href="#contact">ask</a>. I pick up new tools quickly.</p>
   </section>
@@ -473,7 +469,7 @@ nav.top a.hire.on{color:var(--on-accent);background:var(--accent)}
     <div class="cta" style="justify-content:center">
       <a class="btn primary" href="mailto:prasadmpotdar22@gmail.com?subject=Project%20enquiry">Email about a project</a>
       <a class="btn" href="mailto:prasadmpotdar22@gmail.com?subject=Role%20opportunity">Email about a role</a>
-      <a class="btn" href="https://www.linkedin.com/in/prasad-potdar-b43a5412a" target="_blank" rel="noopener">Message me on LinkedIn ↗</a>
+      <a class="btn" href="https://www.linkedin.com/in/prasad-potdar-b43a5412a" target="_blank" rel="noopener">Message me on LinkedIn</a>
     </div>
   </section>
   </main>
@@ -560,20 +556,6 @@ nav.top a.hire.on{color:var(--on-accent);background:var(--accent)}
   var rot=d.getElementById('rot'),words=['full-stack products, end to end','NestJS microservices','Flutter mobile apps','cloud infrastructure','AI features with RAG'],i=0;
   setInterval(function(){rot.classList.add('out');setTimeout(function(){i=(i+1)%words.length;rot.textContent=words[i];rot.classList.remove('out');},350);},2800);
 
-  /* scroll reveal, with a fallback so nothing stays hidden */
-  if('IntersectionObserver' in window){
-    root.classList.add('js');
-    var items=[].slice.call(d.querySelectorAll('.eyebrow,.sec-title,.job,.also,.panel,.feature,.svc,.closing'));
-    items.forEach(function(el){
-      el.classList.add('rv');
-      var sib=[].indexOf.call(el.parentNode.children,el);
-      el.style.transitionDelay=Math.min(sib,6)*60+'ms';
-    });
-    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){show(e.target);io.unobserve(e.target);}});},{threshold:.12,rootMargin:'0px 0px -6% 0px'});
-    function show(t){t.classList.add('in');setTimeout(function(){t.classList.remove('rv','in');t.style.transitionDelay='';},1300);}
-    items.forEach(function(el){io.observe(el);});
-    setTimeout(function(){items.forEach(function(el){if(el.classList.contains('rv')&&!el.classList.contains('in'))show(el);});},4000);
-  }
 })();
 </script>
 
