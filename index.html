@@ -21,6 +21,7 @@
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Prasad Potdar","jobTitle":"Senior Full Stack Developer","worksFor":{"@type":"Organization","name":"Political Data Intelligence"},"address":{"@type":"PostalAddress","addressRegion":"Maharashtra","addressCountry":"IN"},"email":"mailto:prasadmpotdar22@gmail.com","url":"https://potdarprasad.github.io/","sameAs":["https://www.linkedin.com/in/prasad-potdar-b43a5412a","https://github.com/potdarprasad"],"knowsAbout":["NestJS","Node.js","TypeScript","React","Next.js","Flutter","PostgreSQL","AWS","Kubernetes","Microservices","RAG","AI"]}</script>
 <style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
 <title>Prasad Potdar · Senior Full Stack Developer</title>
+<script>try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark')document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap">
@@ -74,6 +75,10 @@ canvas#code{position:absolute;inset:0;width:100%;height:100%;-webkit-mask-image:
 nav.top ul{display:flex;gap:2px;list-style:none;margin:0;padding:0;align-items:center}
 nav.top a{display:block;padding:10px 15px;border-radius:999px;text-decoration:none;font:500 13px/1 var(--mono);color:var(--muted);transition:color .2s,background .2s}
 nav.top a:hover{color:var(--fg);background:var(--surface2)}
+.theme{display:grid;place-items:center;width:36px;height:36px;margin-left:4px;border-radius:50%;border:1px solid var(--line);background:transparent;color:var(--muted);cursor:pointer;transition:color .2s,background .2s}
+.theme:hover{color:var(--fg);background:var(--surface2)}
+.theme:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.theme svg{width:16px;height:16px}
 nav.top a.hire{background:var(--accent);color:var(--on-accent);margin-left:6px}
 nav.top a.hire:hover{color:var(--on-accent);filter:brightness(1.08)}
 @media (max-width:640px){nav.top .mark{display:none}nav.top{padding-left:8px}nav.top ul{width:100%;justify-content:space-between}nav.top a{padding:10px 11px}}
@@ -83,7 +88,7 @@ nav.top a.hire:hover{color:var(--on-accent);filter:brightness(1.08)}
 /* hero */
 .hero{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:48px;align-items:center;padding:96px 0 40px}
 .hero-copy{display:flex;flex-direction:column;gap:28px;min-width:0;animation:up .9s cubic-bezier(.2,.7,.2,1) both}
-h1{font-size:clamp(3.4rem,9vw,7.2rem);font-weight:800;letter-spacing:-.05em;line-height:.9}
+h1{font-size:clamp(2.6rem,6.2vw,4.8rem);font-weight:800;letter-spacing:-.05em;line-height:.9}
 .role{font:600 clamp(1.4rem,3vw,2.1rem)/1.2 var(--display);letter-spacing:-.025em;color:var(--fg)}
 .role em{font-style:normal;color:var(--muted);font-weight:400}
 .lead{max-width:46ch;font-size:clamp(1.1rem,2.2vw,1.3rem);line-height:1.6}
@@ -121,6 +126,10 @@ section{padding-top:128px;scroll-margin-top:72px}
 .job{position:relative;background:var(--surface);border:1px solid var(--line);border-radius:24px;padding:34px;min-width:0}
 .job::after{content:"";position:absolute;left:-38px;top:40px;width:16px;height:16px;border-radius:50%;background:var(--bg);border:3px solid var(--accent)}
 .job.past::after{border-color:var(--muted)}
+.job.past{padding:28px 34px}
+.job.past h3{font-size:clamp(1.35rem,2.4vw,1.75rem)}
+.job.past .pts{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 32px;margin-top:18px;font-size:.97rem}
+@media (max-width:700px){.job.past .pts{grid-template-columns:minmax(0,1fr)}}
 .job h3{font-size:clamp(1.55rem,3vw,2.2rem);font-weight:800;letter-spacing:-.03em;line-height:1.1;margin-top:12px}
 .job .co{margin-top:8px;font-weight:500;color:var(--accent)}
 .job p.note{margin-top:16px;max-width:58ch}
@@ -136,7 +145,7 @@ section{padding-top:128px;scroll-margin-top:72px}
 .groups .label{display:block;margin-bottom:12px;color:var(--accent2)}
 .groups .pts{margin:0;grid-template-columns:minmax(0,1fr);gap:12px}
 @media (max-width:860px){.groups{grid-template-columns:minmax(0,1fr)}}
-@media (max-width:640px){.job{padding:24px}.tl{padding-left:30px}.job::after{left:-30px}}
+@media (max-width:640px){.job,.job.past{padding:24px}.tl{padding-left:30px}.job::after{left:-30px}}
 
 /* bento */
 .bento{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:16px}
@@ -261,6 +270,9 @@ nav.top a.hire.on{color:var(--on-accent);background:var(--accent)}
 .job{transition:border-color .25s}
 .job:hover{border-color:color-mix(in srgb,var(--accent) 45%,var(--line))}
 .chips span{transition:transform .2s,border-color .2s}
+.chips span.core{background:color-mix(in srgb,var(--accent) 16%,var(--surface2));border-color:color-mix(in srgb,var(--accent) 70%,var(--line))}
+.stack-key{display:flex;align-items:center;gap:10px;margin:-32px 0 24px;font:500 13px/1 var(--mono);color:var(--muted)}
+.stack-key i{width:14px;height:14px;border-radius:4px;background:color-mix(in srgb,var(--accent) 16%,var(--surface2));border:1px solid color-mix(in srgb,var(--accent) 70%,var(--line))}
 .chips span:hover{transform:translateY(-2px);border-color:var(--accent)}
 @keyframes up{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
@@ -279,6 +291,7 @@ nav.top a.hire.on{color:var(--on-accent);background:var(--accent)}
       <li><a href="#stack">Stack</a></li>
       <li><a href="#work">Work</a></li>
       <li><a href="#services">Services</a></li>
+      <li><button class="theme" type="button" id="theme" aria-label="Switch colour theme"></button></li>
       <li><a class="hire" href="#contact">Hire me</a></li>
     </ul>
   </nav>
@@ -378,14 +391,15 @@ nav.top a.hire.on{color:var(--on-accent);background:var(--accent)}
   <section id="stack" aria-labelledby="stack-h">
     <div class="eyebrow label">Stack</div>
     <h2 class="sec-title" id="stack-h">Tools I reach for</h2>
+    <p class="stack-key"><i></i>Core strengths</p>
     <div class="bento">
       <div class="panel ai w6"><span class="label">Featured</span><h3>AI engineering</h3><div class="chips"><span>RAG</span><span>Vercel AI SDK</span><span>Spec-driven development</span></div><div class="prov"><span class="label">Models and tools</span><div class="chips"><span>Claude</span><span>OpenAI</span><span>Groq</span><span>Google Gemini</span><span>OpenRouter</span><span>GitHub Copilot</span></div></div><div class="learn"><span class="label">Learning</span><b>Agentic AI</b></div></div>
-      <div class="panel w3"><h3>Backend</h3><div class="chips"><span>Node.js</span><span>NestJS</span><span>Express.js</span><span>Django</span><span>Microservices</span><span>RabbitMQ</span><span>BullMQ</span><span>Background jobs</span></div></div>
-      <div class="panel w3"><h3>Frontend and mobile</h3><div class="chips"><span>React</span><span>Next.js</span><span>Angular</span><span>Vue.js</span><span>Tailwind CSS</span><span>Bootstrap</span><span>HTML5/CSS3</span><span>Flutter</span><span>Provider</span><span>BLoC</span><span>React Native</span></div></div>
-      <div class="panel"><h3>Languages</h3><div class="chips"><span>TypeScript</span><span>JavaScript</span><span>Python</span><span>Java</span><span>SQL</span></div></div>
-      <div class="panel"><h3>Databases</h3><div class="chips"><span>PostgreSQL</span><span>MongoDB</span><span>MySQL</span><span>Redis</span><span>Neon</span><span>Drizzle ORM</span></div></div>
+      <div class="panel w3"><h3>Backend</h3><div class="chips"><span class="core">Node.js</span><span class="core">NestJS</span><span>Express.js</span><span>Django</span><span class="core">Microservices</span><span>RabbitMQ</span><span>BullMQ</span><span>Background jobs</span></div></div>
+      <div class="panel w3"><h3>Frontend and mobile</h3><div class="chips"><span class="core">React</span><span>Next.js</span><span>Angular</span><span>Vue.js</span><span>Tailwind CSS</span><span>Bootstrap</span><span>HTML5/CSS3</span><span>Flutter</span><span>Provider</span><span>BLoC</span><span>React Native</span></div></div>
+      <div class="panel"><h3>Languages</h3><div class="chips"><span class="core">TypeScript</span><span>JavaScript</span><span>Python</span><span>Java</span><span>SQL</span></div></div>
+      <div class="panel"><h3>Databases</h3><div class="chips"><span class="core">PostgreSQL</span><span>MongoDB</span><span>MySQL</span><span>Redis</span><span>Neon</span><span>Drizzle ORM</span></div></div>
       <div class="panel"><h3>APIs and security</h3><div class="chips"><span>REST</span><span>GraphQL</span><span>WebSockets</span><span>JWT</span><span>OAuth</span><span>Better Auth</span><span>zod</span></div></div>
-      <div class="panel w4"><h3>Cloud and delivery</h3><div class="chips"><span>AWS</span><span>Lambda</span><span>EC2</span><span>S3</span><span>SQS</span><span>Vercel</span><span>Cloudflare R2</span><span>Docker</span><span>Kubernetes</span><span>Pulumi</span><span>Git</span><span>GitHub Actions</span><span>Jenkins</span><span>Deployment pipelines</span><span>CI/CD</span></div></div>
+      <div class="panel w4"><h3>Cloud and delivery</h3><div class="chips"><span class="core">AWS</span><span>Lambda</span><span>EC2</span><span>S3</span><span>SQS</span><span>Vercel</span><span>Cloudflare R2</span><span>Docker</span><span>Kubernetes</span><span>Pulumi</span><span>Git</span><span>GitHub Actions</span><span>Jenkins</span><span>Deployment pipelines</span><span>CI/CD</span></div></div>
       <div class="panel"><h3>Testing</h3><div class="chips"><span>Jest</span><span>Supertest</span><span>Mocha</span><span>Cypress</span><span>Playwright</span><span>Flutter test</span><span>Postman</span></div></div>
       <div class="panel w6"><h3>Architecture and leadership</h3><div class="chips"><span>System design</span><span>Distributed systems</span><span>API design</span><span>Shared libraries</span><span>Architecture reviews</span><span>Code reviews</span><span>Technical leadership</span><span>Mentoring</span><span>Hiring and interviewing</span></div></div>
     </div>
@@ -563,10 +577,27 @@ nav.top a.hire.on{color:var(--on-accent);background:var(--accent)}
     colors();size();seed();draw(0);
     window.addEventListener('resize',function(){size();seed();draw(0);});
     if(window.matchMedia){var mq=matchMedia('(prefers-color-scheme: dark)');var oc=function(){colors();draw(0);};if(mq.addEventListener)mq.addEventListener('change',oc);}
+    d.addEventListener('themechange',function(){colors();draw(0);});
     var onScreen=true;
     if('IntersectionObserver' in window){new IntersectionObserver(function(es){onScreen=es[0].isIntersecting;onScreen&&!d.hidden?start():stop();}).observe(cv);}else{start();}
     d.addEventListener('visibilitychange',function(){d.hidden||!onScreen?stop():start();});
   })();
+
+  /* light/dark toggle: overrides the system setting, remembered per visitor */
+  var tb=d.getElementById('theme');
+  var SUN='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>';
+  var MOON='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>';
+  function dark(){var a=root.getAttribute('data-theme');return a?a==='dark':!(window.matchMedia&&matchMedia('(prefers-color-scheme: light)').matches);}
+  function paint(){var k=dark();tb.innerHTML=k?SUN:MOON;tb.setAttribute('aria-label',k?'Switch to light theme':'Switch to dark theme');}
+  if(tb){
+    paint();
+    tb.addEventListener('click',function(){
+      var t=dark()?'light':'dark';root.setAttribute('data-theme',t);
+      try{localStorage.setItem('theme',t);}catch(e){}
+      paint();d.dispatchEvent(new Event('themechange'));
+    });
+    if(window.matchMedia){var lm=matchMedia('(prefers-color-scheme: light)');if(lm.addEventListener)lm.addEventListener('change',paint);}
+  }
 
   /* copy email: falls back to showing the address if the clipboard is blocked */
   var cp=d.getElementById('copy-email');

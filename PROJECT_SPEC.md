@@ -68,14 +68,14 @@ CV figures are shown softened, as approximate team results ("helping", "about", 
 ## Page structure
 1. Sticky pill nav (`~/prasad-potdar` with blinking cursor, links, "Hire me"). Services hides under 520 px, Work under 400 px.
 2. Hero: `$ whoami`, name, "Senior Full Stack Developer at Political Data Intelligence", rotating "I build ..." line (starts broad: "full-stack products, end to end"), lead copy (outcome first: "I build production software that solves real business problems."), two buttons for the two visitor paths ("Discuss a project" for clients, "Hiring? See my experience" for recruiters), legend for the code background. Right side: `profile.json` at-a-glance panel.
-3. Experience timeline. Current role bullets are grouped under three themes: Architecture and backend, Cloud and delivery, Leadership and mobile.
-4. Stack bento grid, "AI engineering" as the featured tile: practice chips first, provider names in a smaller secondary row, Agentic AI under Learning.
+3. Experience timeline, newest first. Past roles use a compact card (two-column bullets, smaller title). Current role bullets are grouped under three themes: Architecture and backend, Cloud and delivery, Leadership and mobile.
+4. Stack bento grid. Core strengths (TypeScript, Node.js, NestJS, Microservices, React, PostgreSQL, AWS) get a highlighted chip style, explained by a "Core strengths" key under the title. "AI engineering" is the featured tile: practice chips first, provider names in a smaller secondary row, Agentic AI under Learning.
 5. Selected work: Vasundhara Nature Studio card, with a row of three screenshots linking to the live pages; then a smaller "Payment gateway failover" card (Step Set Go, CV facts only, no stack chips). No separate case-study page (Prasad declined, 2026-10-18).
 6. Services: "How I can help", five cards: Web app development and Mobile app development (wide, first row), then Backend and cloud architecture, AI integrations and automation, End-to-end MVP delivery and an "Also" line (architecture reviews, websites, online stores, CRMs, anything in software). Then "How I work", a static connected stepper (numbered circles joined by gradient arrows; vertical on screens under 860 px, last step filled) with four steps confirmed by Prasad (2026-10-26): free intro call; written scope, estimate and timeline; build in milestones with regular demos; deploy, hand over code and docs, support after launch.
 7. Contact: closing card with two path cards (Hiring, Consulting), "Email about a project" / "Email about a role" (mailto with subject), "Copy email" (clipboard, falls back to showing the address) and LinkedIn, then footer. "Open to all types of work" appears once here and once in profile.json, not in the hero.
 
 ## Design system
-Dark first, light follows `prefers-color-scheme`. All colours are CSS variables on `:root`.
+Dark first, light follows `prefers-color-scheme`. A sun/moon button in the nav overrides it by setting `data-theme` on `<html>`; the choice is saved in localStorage and applied by a tiny head script before first paint. All colours are CSS variables on `:root`.
 
 | Token | Dark | Light |
 |---|---|---|
